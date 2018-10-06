@@ -10,9 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
         >
 
     </android.support.v7.widget.Toolbar>
+
+
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,8 +25,43 @@
         android:clipToPadding="false"
         android:foregroundGravity="center"
         android:layout_below="@id/toolbar"
+        android:layout_marginBottom="50dp"
         >
 
     </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sortbuttons"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        >
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="All"
+            android:background="@android:color/white"
+            android:textSize="12sp"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="College"
+            android:background="@android:color/white"
+            android:textSize="12sp"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="   Clubs"
+            android:background="@android:color/white"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
 
 </RelativeLayout>
