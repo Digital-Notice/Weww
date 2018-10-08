@@ -26,7 +26,7 @@ public class NoticeDisplay extends AppCompatActivity {
                 "\n" +
                 "Thank you for the opportunities for professional and personal development that you have provided me during the last five years.\n";
         models.add(new Model(R.drawable.ic_launcher_background,"Diwali Vacation","8/Oct","7:20 PM","Auditorium",descrp,"Bhupal Arya"));
-        models.add(new Model(R.drawable.ic_launcher_background,"Abhyudaya Interview","13/Oct","12:00","COER CAFETARIA",descrp,"Saharsh Pandey"));
+        models.add(new Model(R.drawable.ic_launcher_background,"Zion Fest","13/Oct","12:00","COER CAFETARIA",descrp,"Saharsh Pandey"));
         models.add(new Model(R.drawable.ic_launcher_background,"Abhyudaya Interview","13/Oct","12:00","COER CAFETARIA",descrp,"Saharsh Pandey"));
         models.add(new Model(R.drawable.ic_launcher_background,"Abhyudaya Interview","13/Oct","12:00","COER CAFETARIA",descrp,"Saharsh Pandey"));
         models.add(new Model(R.drawable.ic_launcher_background,"Abhyudaya Interview","13/Oct","12:00","COER CAFETARIA",descrp,"Saharsh Pandey"));
@@ -40,8 +40,29 @@ public class NoticeDisplay extends AppCompatActivity {
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
+        viewPager.setClipToPadding(false);
+        viewPager.setClipChildren(false);
         viewPager.setPadding(40,0,40,0);
 
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                if(state < models.size())
+                {
+                    viewPager.setCurrentItem(0);
+                }
+            }
+        });
 
     }
 }
