@@ -54,7 +54,7 @@ public class Adapter extends PagerAdapter{
         updatedBy.setText(models.get(position).getUpdatedBy());
 
         container.addView(view , 0);
-        return super.instantiateItem(container, position);
+        return view;
 
 
     }
