@@ -3,7 +3,6 @@ package com.example.iknownothing.weww;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +39,21 @@ public class Adapter extends PagerAdapter{
 
         TextView title,date,time,venue,details,updatedBy;
 
+        title = view.findViewById(R.id.title);
+        date = view.findViewById(R.id.date);
+        time = view.findViewById(R.id.time);
+        venue = view.findViewById(R.id.venue);
+        details = view.findViewById(R.id.details);
+        updatedBy = view.findViewById(R.id.updatedBy);
+
+        title.setText(models.get(position).getTitle());
+        date.setText(models.get(position).getDate());
+        time.setText(models.get(position).getTime());
+        venue.setText(models.get(position).getVenue());
+        details.setText(models.get(position).getDetails());
+        updatedBy.setText(models.get(position).getUpdatedBy());
+
+        container.addView(view , 0);
         return super.instantiateItem(container, position);
 
 
