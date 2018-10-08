@@ -54,16 +54,17 @@ public class NoticeDisplay extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
 
-            }
+                Log.d("hello",String.valueOf(position));
+                if(position == models.size()-1) {
+                    viewPager.setCurrentItem(0);
+                    }
+                }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                Log.d("hello",String.valueOf(state));
-                if(state == models.size()-1)
-                {
-                    viewPager.setCurrentItem(0);
-                }
-            }
+                
+                   }
+
         });
 
     }
