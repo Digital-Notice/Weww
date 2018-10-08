@@ -21,6 +21,7 @@
         android:padding="5dp"
         >
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Diwali Vacation"
@@ -45,6 +46,7 @@
             />
 
             <TextView
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18/10/2018"
@@ -70,6 +72,7 @@
                 />
 
             <TextView
+                android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9:45 AM"
@@ -95,6 +98,7 @@
                 />
 
             <TextView
+                android:id="@+id/venue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Auditorium Block"
@@ -112,6 +116,7 @@
             android:layout_marginTop="15dp"
             />
         <TextView
+            android:id="@+id/details"
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,6 +132,7 @@ Thank you for the opportunities for professional and personal development that y
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <TextView
+            android:id="@+id/updatedBy"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:layout_alignParentRight="true"
